@@ -1,0 +1,37 @@
+/* Import Shippori Mincho B1 font */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap');
+
+/* Import Press Start 2P font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Declare global CSS variables (:root selector selects <html>) */
+:root {
+  --blue: #0f3460;
+  --orange: #d7883a;
+}
+
+@media (prefers-color-scheme: light) { /* Light mode */
+  :root {
+    --background-color: #f2f2f2;
+    --text-color: #131717;
+  }
+}
+
+@media (prefers-color-scheme: dark) { /* Dark mode */
+  :root {
+    --background-color: #131717;
+    --text-color: #f2f2f2;
+  }
+}
+
+/* Remove default margin, padding and border */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Set background color */
+body {
+  background-color: var(--background-color);
+}
