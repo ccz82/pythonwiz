@@ -19,7 +19,7 @@ header {
 }
 
 #logo {
-  padding: 15px;
+  margin: 15px;
 }
 
 #navigationLinks {
@@ -28,7 +28,7 @@ header {
 
 .navigationLink {
   text-decoration: none;
-  padding: 15px;
+  margin: 15px;
   font-family: 'Press Start 2P', cursive;
   color: white; /* Always white regardless of light/dark mode */
 }

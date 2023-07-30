@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
     <title>pythonwiz</title>
   </head>
 
@@ -28,7 +29,7 @@
           <!-- Desktop navigation links -->
           <nav id="navigationLinks">
             <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
-            <a class="navigationLink" href="/reference/index.html">Reference</a>
+            <a class="navigationLink" href="/quizzes/index.html">Quizzes</a>
           </nav>
           <!-- Mobile menu button -->
           <button onclick="setMenuState()" id="menuButton">
@@ -62,13 +63,21 @@
       <!-- Mobile menu -->
       <nav id="mobileMenu">
         <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
-        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+        <a class="mobileMenuLink" href="/quizzes/index.html">Quizzes</a>
       </nav>
     </header>
 
-    <h1>home page</h1>
+    <!-- Homepage content -->
+    <div id="heroSection">
+      <div id="heroContent">
+        <h1>Unlock the power of programming with Python</h1>
+        <a id="startLearning" href="/tutorials/introduction-to-python.html">Start Learning</a>
+      </div>
+    <div/>
 
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>
+    <!-- Import homepage script -->
+    <script src="/scripts/home.js"></script>
   </body>
 </html>

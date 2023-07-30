@@ -18,6 +18,7 @@
     --text-color: #131717;
     --table-background-color: #d1d1d1;
     --table-border-color: #a8a8a8;
+    --hero-backdrop-url: url("/assets/images/backdrop-light.png");
   }
 }
 
@@ -27,6 +28,7 @@
     --text-color: #f2f2f2;
     --table-background-color: #1a1f1f;
     --table-border-color: #616161;
+    --hero-backdrop-url: url("/assets/images/backdrop-dark.png");
   }
 }
 

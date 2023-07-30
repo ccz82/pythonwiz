@@ -1,3 +1,4 @@
+// Manage mobile menu state
 const menuButtonSvg = document.getElementById("menuButtonSvg");
 const menuCloseSvg = document.getElementById("menuCloseSvg");
 const mobileMenu = document.getElementById("mobileMenu");
