@@ -3,8 +3,9 @@
 A Python educational site that aims to teach beginners about the Python programming language. With a modern design inspired by the retro 8-bit aesthetic, this website is built with vanilla HTML, CSS and JavaScript.
 
 ## Features
-- Light/dark mode based on user's system
-- A progress bar to indicate scroll position
+- A quiz to test your knowledge on Python
+- Light/dark theme based on user's system preference
+- A progress bar to indicate scroll position when reading tutorials
 
 ## Installation
 Clone the repository.
