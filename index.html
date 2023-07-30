@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <title>pythonwiz</title>
   </head>
 
@@ -71,13 +72,53 @@
     <div id="heroSection">
       <div id="heroContent">
         <h1>Unlock the power of programming with Python</h1>
-        <a id="startLearning" href="/tutorials/introduction-to-python.html">Start Learning</a>
+        <a id="startLearning" href="/tutorials/introduction-to-python.html"
+          >Start Learning</a
+        >
       </div>
-    <div/>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div id="footerItems">
+        <!-- Logo -->
+        <img
+          id="footerLogo"
+          src="/assets/logo.png"
+          alt="pythonwiz Logo"
+          width="175"
+          height="35"
+        />
+        <!-- Footer links -->
+        <nav id="footerLinks">
+          <a class="footerLink" href="/index.html">Home</a>
+          <a class="footerLink" href="/tutorials/index.html">Tutorials</a>
+          <a class="footerLink" href="/quizzes/index.html">Quizzes</a>
+        </nav>
+        <!-- Horizontal line -->
+        <hr />
+        <!-- Email sign up form -->
+        <form action="" method="POST">
+          <label id="emailLabel" for="email"
+            >Sign up to receive the latest pythonwiz tutorials!</label
+          >
+          <div>
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Email address"
+              required
+            />
+            <input type="submit" id="submitButton" value="Sign Up" />
+          </div>
+        </form>
+        <!-- Horizontal line -->
+        <hr />
+        <span id="copyright">Copyright &copy; 2023 Chin Chun Zhen</span>
+      </div>
+    </footer>
 
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>
-    <!-- Import homepage script -->
-    <script src="/scripts/home.js"></script>
   </body>
 </html>

@@ -15,8 +15,6 @@
 #heroContent {
   font-family: "Shippori Mincho B1", serif;
   color: var(--text-color);
-  padding-left: 10px;
-  padding-bottom: 10px;
 
   /* Responsive design */
   margin-left: auto;

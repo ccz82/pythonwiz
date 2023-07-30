@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
     <link
       rel="stylesheet"
@@ -67,7 +68,7 @@
       </div>
       <!-- Mobile menu -->
       <nav id="mobileMenu">
-        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink activeLink" href="/tutorials/index.html">Tutorials</a>
         <a class="mobileMenuLink" href="/quizzes/index.html">Quizzes</a>
       </nav>
     </header>
@@ -205,6 +206,46 @@
       <a href="./hello-world.html">Previous</a>
       <a href="./operators-and-expressions.html">Next</a>
     </nav>
+
+    <!-- Footer -->
+    <footer>
+      <div id="footerItems">
+        <!-- Logo -->
+        <img
+          id="footerLogo"
+          src="/assets/logo.png"
+          alt="pythonwiz Logo"
+          width="175"
+          height="35"
+        />
+        <!-- Footer links -->
+        <nav id="footerLinks">
+          <a class="footerLink" href="/index.html">Home</a>
+          <a class="footerLink" href="/tutorials/index.html">Tutorials</a>
+          <a class="footerLink" href="/quizzes/index.html">Quizzes</a>
+        </nav>
+        <!-- Horizontal line -->
+        <hr />
+        <!-- Email sign up form -->
+        <form action="" method="POST">
+          <label id="emailLabel" for="email"
+            >Sign up to receive the latest pythonwiz tutorials!</label
+          >
+          <div>
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Email address"
+              required
+            />
+            <input type="submit" id="submitButton" value="Sign Up" />
+          </div>
+        </form>
+        <!-- Horizontal line -->
+        <hr />
+        <span id="copyright">Copyright &copy; 2023 Chin Chun Zhen</span>
+      </div>
+    </footer>
 
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>

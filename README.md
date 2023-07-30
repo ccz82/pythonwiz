@@ -2,6 +2,9 @@
 
 A Python educational site that aims to teach beginners about the Python programming language. With a modern design inspired by the retro 8-bit aesthetic, this website is built with vanilla HTML, CSS and JavaScript.
 
+## Features
+- Light/dark mode based on user's system
+
 ## Installation
 Clone the repository.
 ```bash

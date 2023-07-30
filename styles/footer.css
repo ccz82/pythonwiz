@@ -1,0 +1,79 @@
+/* Footer styles */
+
+footer {
+  background-color: #2d2d2d;
+}
+
+#footerItems {
+  font-family: "Shippori Mincho B1", serif;
+  color: white;
+  padding: 15px;
+  text-align: center;
+
+  /* Responsive design */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+}
+
+#footerLogo {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#footerLinks {
+  text-align: center;
+}
+
+.footerLink {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  color: var(--orange);
+}
+
+#footerItems hr {
+  border: none;
+  height: 1px;
+  background-color: #404040;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#footerItems form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#emailLabel {
+  font-size: 1.3em;
+}
+
+#emailInput {
+  height: 40px;
+  width: 30vw;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+#submitButton {
+  color: white;
+  font-weight: bold;
+  background-color: var(--orange);
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  text-decoration: underline;
+}

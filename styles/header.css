@@ -37,14 +37,10 @@ header {
   color: var(--orange);
 }
 
-.activeLink {
-  color: var(--orange);
-}
-
 #menuButton {
-  cursor: pointer;
   background: none;
   padding: 10px;
+  cursor: pointer;
   touch-action: manipulation; /* Disable double-tap zoom on iOS */
 }
 
@@ -69,6 +65,10 @@ header {
   padding: 15px;
   font-family: 'Press Start 2P', cursive;
   color: white;
+}
+
+.activeLink {
+  color: var(--orange);
 }
 
 @media screen and (min-width: 768px) {

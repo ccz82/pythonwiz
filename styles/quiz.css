@@ -1,0 +1,17 @@
+/* Quiz styles */
+
+#quiz {
+  font-family: "Shippori Mincho B1", serif;
+  color: var(--text-color);
+  padding: 15px;
+  text-align: center;
+
+  /* Responsive design */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+}
+
+#question {
+
+}
