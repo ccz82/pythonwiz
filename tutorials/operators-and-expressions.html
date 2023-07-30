@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <title>pythonwiz | Operators and Expressions</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="navigationItems">
+        <!-- Logo (both mobile and desktop) -->
+        <a href="/index.html" id="logo">
+          <img
+            src="/assets/logo.png"
+            alt="pythonwiz Logo"
+            width="175"
+            height="35"
+          />
+        </a>
+        <!-- Buttons and navigation links -->
+        <div>
+          <!-- Desktop navigation links -->
+          <nav id="navigationLinks">
+            <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button onclick="setMenuState()" id="menuButton">
+            <!-- Menu button SVG -->
+            <svg
+              id="menuButtonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+              />
+            </svg>
+            <!-- Menu close SVG -->
+            <svg
+              id="menuCloseSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu">
+        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <h1 id="operators-and-expressions">Operators and Expressions</h1>
+      <p>
+        Operators and expressions are fundamental components of Python that
+        allow you to perform various computations and manipulations on data. In
+        this tutorial, we will explore different types of operators and how they
+        are used to create expressions in Python.
+      </p>
+      <h2 id="arithmetic-operators">Arithmetic Operators</h2>
+      <p>
+        Arithmetic operators are used to perform basic mathematical operations.
+      </p>
+      <div class="tableContainer">
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="language-python">+</code></td>
+              <td>Addition</td>
+              <td><code class="language-python">5 + 3</code></td>
+              <td><code class="language-python">8</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">-</code></td>
+              <td>Subtraction</td>
+              <td><code class="language-python">10 - 2</code></td>
+              <td><code class="language-python">8</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">*</code></td>
+              <td>Multiplication</td>
+              <td><code class="language-python">4 * 5</code></td>
+              <td><code class="language-python">20</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">/</code></td>
+              <td>Division</td>
+              <td><code class="language-python">10 / 2</code></td>
+              <td><code class="language-python">5.0</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">%</code></td>
+              <td>Modulo (Remainder)</td>
+              <td><code class="language-python">10 % 3</code></td>
+              <td><code class="language-python">1</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">**</code></td>
+              <td>Exponentiation</td>
+              <td><code class="language-python">2 ** 3</code></td>
+              <td><code class="language-python">8</code></td>
+            </tr>
+            <tr>
+              <td><code class="language-python">//</code></td>
+              <td>Floor Division</td>
+              <td><code class="language-python">10 // 3</code></td>
+              <td><code class="language-python">3</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2 id="assignment-operators">Assignment Operators</h2>
+      <p>Assignment operators are used to assign values to variables.</p>
+      <pre><code class="language-python">
+      x = 10      # Assign the value 10 to variable x
+      y += 5      # Equivalent to: y = y + 5
+      </code></pre>
+      <h2 id="comparison-operators">Comparison Operators</h2>
+      <p>
+        Comparison operators are used to compare values and return boolean
+        results (True or False).
+      </p>
+      <pre><code class="language-python">
+      x == y      # Equal to
+      x != y      # Not equal to
+      x &gt; y       # Greater than
+      x &lt; y       # Less than
+      x &gt;= y      # Greater than or equal to
+      x &lt;= y      # Less than or equal to
+      </code></pre>
+      <h2 id="logical-operators">Logical Operators</h2>
+      <p>
+        Logical operators are used to combine multiple conditions and evaluate
+        the overall expression.
+      </p>
+      <pre><code class="language-python">
+      x and y     # True if both x and y are True
+      x or y      # True if either x or y is True
+      not x       # True if x is False (negation)
+      </code></pre>
+      <h2 id="bitwise-operators">Bitwise Operators</h2>
+      <p>
+        Bitwise operators perform operations on individual bits of integers.
+      </p>
+      <pre><code class="language-python">
+      x &amp; y       # Bitwise AND
+      x | y       # Bitwise OR
+      x ^ y       # Bitwise XOR
+      ~x          # Bitwise NOT (complement)
+      x &lt;&lt; y      # Bitwise left shift
+      x &gt;&gt; y      # Bitwise right shift
+      </code></pre>
+      <h2 id="identity-operators">Identity Operators</h2>
+      <p>
+        Identity operators are used to compare the memory locations of two
+        objects.
+      </p>
+      <pre><code class="language-python">
+      x is y      # True if x and y reference the same object
+      x is not y  # True if x and y reference different objects
+      </code></pre>
+      <h2 id="membership-operators">Membership Operators</h2>
+      <p>
+        Membership operators are used to check if a value exists in a sequence
+        (e.g., list, tuple, string).
+      </p>
+      <pre><code class="language-python">
+      x in sequence       # True if x is present in the sequence
+      x not in sequence   # True if x is not present in the sequence
+      </code></pre>
+      <h2 id="expressions">Expressions</h2>
+      <p>
+        Expressions are combinations of variables, values, and operators that
+        are evaluated to produce a result.
+      </p>
+      <pre><code class="language-python">
+      x = 5
+      y = 10
+      result = x + y # Expression: x + y
+      </code></pre>
+    </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./variables-and-data-types.html">Previous</a>
+      <a href="./control-flow.html">Next</a>
+    </nav>
+
+    <!-- Import header script -->
+    <script src="/scripts/header.js"></script>
+    <!-- Import syntax highlighting scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  </body>
+</html>

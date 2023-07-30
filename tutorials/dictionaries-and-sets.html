@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <title>pythonwiz | Dictionaries and Sets</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="navigationItems">
+        <!-- Logo (both mobile and desktop) -->
+        <a href="/index.html" id="logo">
+          <img
+            src="/assets/logo.png"
+            alt="pythonwiz Logo"
+            width="175"
+            height="35"
+          />
+        </a>
+        <!-- Buttons and navigation links -->
+        <div>
+          <!-- Desktop navigation links -->
+          <nav id="navigationLinks">
+            <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button onclick="setMenuState()" id="menuButton">
+            <!-- Menu button SVG -->
+            <svg
+              id="menuButtonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+              />
+            </svg>
+            <!-- Menu close SVG -->
+            <svg
+              id="menuCloseSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu">
+        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <h1 id="dictionaries-and-sets">Dictionaries and Sets</h1>
+      <p>
+        Dictionaries and sets are two essential data structures in Python used
+        for efficient data storage and retrieval. This tutorial provides an
+        overview of dictionaries and sets, including their creation,
+        manipulation, and unique characteristics.
+      </p>
+      <h2 id="dictionaries">Dictionaries</h2>
+      <p>
+        A dictionary is an unordered collection of key-value pairs. Each key is
+        unique and used to access its corresponding value. Dictionaries are
+        mutable, allowing you to modify their contents after creation.
+      </p>
+      <h3 id="creating-a-dictionary">Creating a Dictionary</h3>
+      <p>
+        You can create a dictionary in Python by enclosing key-value pairs
+        within curly braces <code class="language-python">{}</code>.
+      </p>
+      <pre><code class="language-python">
+      # Creating a dictionary of person details
+      person = {
+          "name": "John Doe",
+          "age": 30,
+          "occupation": "Engineer"
+      }
+      </code></pre>
+      <h3 id="accessing-values">Accessing Values</h3>
+      <p>
+        You can access the values in a dictionary using their corresponding
+        keys.
+      </p>
+      <pre><code class="language-python">
+      # Accessing the value for the key "name"
+      person_name = person["name"]  # Output: "John Doe"
+
+      # Accessing the value for the key "age"
+      person_age = person["age"]  # Output: 30
+      </code></pre>
+      <h3 id="modifying-values">Modifying Values</h3>
+      <p>
+        Dictionaries are mutable, so you can modify the values associated with
+        keys after creation.
+      </p>
+      <pre><code class="language-python">
+      # Modifying the age value
+      person["age"] = 31
+      print(person)  # Output: {'name': 'John Doe', 'age': 31, 'occupation': 'Engineer'}
+      </code></pre>
+      <h3 id="dictionary-methods">Dictionary Methods</h3>
+      <p>Python provides various methods to manipulate dictionaries:</p>
+      <pre><code class="language-python">
+      # Adding a new key-value pair
+      person["city"] = "New York"
+
+      # Removing a key-value pair by key
+      del person["occupation"]
+
+      # Checking if a key exists in the dictionary
+      if "city" in person:
+          print("City information available")
+      </code></pre>
+      <h2 id="sets">Sets</h2>
+      <p>
+        A set is an unordered collection of unique elements. Sets are mutable,
+        allowing you to add or remove elements after creation.
+      </p>
+      <h3 id="creating-a-set">Creating a Set</h3>
+      <p>
+        You can create a set in Python by enclosing elements within curly braces
+        <code class="language-python">{}</code> or using the
+        <code class="language-python">set()</code> function.
+      </p>
+      <pre><code class="language-python">
+      # Creating a set with curly braces
+      fruits = {"apple", "banana", "orange"}
+
+      # Creating a set with set() function
+      colors = set(["red", "green", "blue"])
+      </code></pre>
+      <h3 id="adding-and-removing-elements">Adding and Removing Elements</h3>
+      <p>You can add and remove elements from a set using various methods.</p>
+      <pre><code class="language-python">
+      # Adding an element to the set
+      fruits.add("grape")
+
+      # Removing an element from the set
+      fruits.remove("banana")
+      </code></pre>
+      <h3 id="set-operations">Set Operations</h3>
+      <p>
+        Sets support various operations like union, intersection, and
+        difference.
+      </p>
+      <pre><code class="language-python">
+      # Union of two sets
+      all_items = fruits.union(colors)
+
+      # Intersection of two sets
+      common_items = fruits.intersection(colors)
+
+      # Difference between two sets
+      unique_colors = colors.difference(fruits)
+      </code></pre>
+      <h2 id="summary">Summary</h2>
+      <div class="tableContainer">
+        <table>
+          <thead>
+            <tr>
+              <th>Dictionary</th>
+              <th>Set</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mutable</td>
+              <td>Mutable</td>
+            </tr>
+            <tr>
+              <td>Ordered from Python 3.7 onwards</td>
+              <td>Unordered</td>
+            </tr>
+            <tr>
+              <td>Indexing/slicing supported</td>
+              <td>Indexing/slicing unsupported</td>
+            </tr>
+            <tr>
+              <td>Duplicate keys not allowed, duplicate values allowed</td>
+              <td>Duplicate elements not allowed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./lists-and-tuples.html">Previous</a>
+      <a href="./functions.html">Next</a>
+    </nav>
+
+    <!-- Import header script -->
+    <script src="/scripts/header.js"></script>
+    <!-- Import syntax highlighting scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  </body>
+</html>

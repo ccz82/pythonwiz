@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
@@ -33,6 +34,7 @@
           <!-- Desktop navigation links -->
           <nav id="navigationLinks">
             <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
           </nav>
           <!-- Mobile menu button -->
           <button onclick="setMenuState()" id="menuButton">
@@ -66,23 +68,53 @@
       <!-- Mobile menu -->
       <nav id="mobileMenu">
         <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
       </nav>
     </header>
 
+    <!-- Content -->
     <article>
-      <h1>Introduction to Python</h1>
+      <h1 id="introduction-to-python">Introduction to Python</h1>
+      <h2 id="what-is-python">What is Python?</h2>
+      <p>Python is a general-purpose programming language used for:</p>
+      <ul>
+        <li>data analysis</li>
+        <li>machine learning</li>
+        <li>developing websites</li>
+        <li>web scraping</li>
+        <li>automating tasks</li>
+        <li>...and many more use cases!</li>
+      </ul>
       <p>
-        Python is a general-purpose programming language used for data analysis,
-        data visualization, developing websites and automating tasks. It has a
-        English-like syntax which makes it easy to read Python code. This makes
-        it a very beginner friendly programming language!
+        It has a English-like syntax which makes it easy to read and understand
+        Python code. This makes it a very beginner friendly programming
+        language!
       </p>
       <pre><code class="language-python">
-      print("Hello, world!")
-      def check(num, num2):
-          return num == num2
+      number = 5 # Set variable 'number' to 5
+
+      if number == 5: # If 'number' is equal to 5, execute line of code below
+          print("The number is 5.")
+      else: # If not, execute the line of code below instead
+          print("The number is not 5.")
       </code></pre>
+      <h2 id="getting-started">Getting Started</h2>
+      <p>
+        To get started with Python, you'll need to install it on your computer.
+        Python is available for all major operating systems (Windows, macOS,
+        Linux). Visit the
+        <a href="https://www.python.org/" target="_blank"
+          >official Python website</a
+        >
+        and download the latest version.
+      </p>
     </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./index.html">Back to Tutorials</a>
+      <a href="./hello-world.html">Next</a>
+    </nav>
 
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>

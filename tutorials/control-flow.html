@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <title>pythonwiz | Control Flow</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="navigationItems">
+        <!-- Logo (both mobile and desktop) -->
+        <a href="/index.html" id="logo">
+          <img
+            src="/assets/logo.png"
+            alt="pythonwiz Logo"
+            width="175"
+            height="35"
+          />
+        </a>
+        <!-- Buttons and navigation links -->
+        <div>
+          <!-- Desktop navigation links -->
+          <nav id="navigationLinks">
+            <a class="navigationLink activeLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button onclick="setMenuState()" id="menuButton">
+            <!-- Menu button SVG -->
+            <svg
+              id="menuButtonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+              />
+            </svg>
+            <!-- Menu close SVG -->
+            <svg
+              id="menuCloseSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu">
+        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <h1 id="control-flow">Control Flow</h1>
+      <p>
+        Control flow in Python allows you to execute specific blocks of code
+        based on certain conditions. This tutorial provides an overview of the
+        control flow structures in Python, including if-else statements, loops,
+        and branching.
+      </p>
+      <h2 id="if-else-statements">If-Else Statements</h2>
+      <p>
+        The if-else statement is used to make decisions in Python. It allows you
+        to execute different blocks of code depending on whether a given
+        condition is true or false.
+      </p>
+      <pre><code class="language-python">
+      if condition:
+          # Code block executed if the condition is true
+          statement1
+          statement2
+      else:
+          # Code block executed if the condition is false
+          statement3
+          statement4
+      </code></pre>
+      <h2 id="elif-statement">Elif Statement</h2>
+      <p>
+        The <code>elif</code> statement is used to add multiple conditions to
+        the if-else block.
+      </p>
+      <pre><code class="language-python">
+      if condition1: # Code block executed if condition1 is true
+          statement1
+      elif condition2: # Code block executed if condition1 is false and condition2 is true
+          statement2
+      else: # Code block executed if all conditions are false
+      statement3
+      </code></pre>
+      <h2 id="loops">Loops</h2>
+      <p>
+        Loops in Python allow you to execute a block of code repeatedly based on
+        a given condition.
+      </p>
+      <h3 id="while-loop">While Loop</h3>
+      <p>
+        The while loop continues to execute as long as the specified condition
+        remains true.
+      </p>
+      <pre><code class="language-python">
+      while condition:
+          # Code block executed as long as the condition is true
+          statement1
+          statement2
+      </code></pre>
+      <h3 id="for-loop">For Loop</h3>
+      <p>
+        The for loop iterates over a sequence (e.g., list, tuple, string) and
+        executes the code block for each element in the sequence.
+      </p>
+      <pre><code class="language-python">
+      for item in sequence:
+          # Code block executed for each item in the sequence
+          statement1
+          statement2
+      </code></pre>
+      <h2 id="break-and-continue">Break and Continue</h2>
+      <p>
+        In loops, you can use the break statement to exit the loop prematurely
+        and the continue statement to skip the current iteration and proceed to
+        the next one.
+      </p>
+      <pre><code class="language-python">
+      for item in sequence:
+      if condition:
+          # Code block executed when the condition is true
+          break  # Exit the loop immediately
+      else:
+          # Code block executed for other iterations
+          continue  # Skip this iteration and proceed to the next one
+      </code></pre>
+      <h2 id="branching-with-ternary-operator">Branching with Ternary Operator</h2>
+      <p>
+        Python supports a concise way of writing if-else statements in a single
+        line using the ternary operator. This pattern is used in other
+        programming languages like
+        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> and
+        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>.
+      </p>
+      <pre><code class="language-python">
+      variable = value_if_true if condition else value_if_false
+      </code></pre>
+    </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./operators-and-expressions.html">Previous</a>
+      <a href="./lists-and-tuples.html">Next</a>
+    </nav>
+
+    <!-- Import header script -->
+    <script src="/scripts/header.js"></script>
+    <!-- Import syntax highlighting scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  </body>
+</html>

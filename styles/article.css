@@ -1,24 +1,81 @@
+/* Article styles */
+
 article {
   font-family: "Shippori Mincho B1", serif;
+  color: var(--text-color);
+  padding: 15px;
+
+  /* Responsive design */
   margin-left: auto;
   margin-right: auto;
   max-width: 70rem;
-  padding: 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-h1 {
+article h1 {
   font-size: 2em;
 }
 
-p {
-  color: var(--text-color);
+article p {
   font-size: 1.2em;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+article a {
+  color: var(--text-color);
+}
+
+article a:hover {
+  color: var(--orange);
+}
+
+article ul,
+article ol {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+ul li,
+ol li {
+  padding: 3px;
+}
+
+/* All tables in <article> to be wrapped with <div class="tableContainer"> */
+.tableContainer {
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens if table overflows */
+}
+
+article table,
+article th,
+article td {
+  border: 1px solid var(--table-border-color);
+  border-collapse: collapse;
+}
+
+article table {
+  width: 100%;
+}
+
+article th,
+article td {
+  padding: 5px;
+  text-align: center;
+}
+
+article th {
+  font-weight: bold;
+}
+
+article table tbody tr:nth-child(odd) {
+  background-color: var(--table-background-color);
 }

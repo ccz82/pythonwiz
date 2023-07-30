@@ -1,3 +1,5 @@
+/* Global styles */
+
 /* Import Shippori Mincho B1 font */
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap');
 
@@ -14,6 +16,8 @@
   :root {
     --background-color: #f2f2f2;
     --text-color: #131717;
+    --table-background-color: #d1d1d1;
+    --table-border-color: #a8a8a8;
   }
 }
 
@@ -21,6 +25,8 @@
   :root {
     --background-color: #131717;
     --text-color: #f2f2f2;
+    --table-background-color: #1a1f1f;
+    --table-border-color: #616161;
   }
 }
 

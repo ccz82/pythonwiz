@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <title>pythonwiz | Modules</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="navigationItems">
+        <!-- Logo (both mobile and desktop) -->
+        <a href="/index.html" id="logo">
+          <img
+            src="/assets/logo.png"
+            alt="pythonwiz Logo"
+            width="175"
+            height="35"
+          />
+        </a>
+        <!-- Buttons and navigation links -->
+        <div>
+          <!-- Desktop navigation links -->
+          <nav id="navigationLinks">
+            <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button onclick="setMenuState()" id="menuButton">
+            <!-- Menu button SVG -->
+            <svg
+              id="menuButtonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+              />
+            </svg>
+            <!-- Menu close SVG -->
+            <svg
+              id="menuCloseSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu">
+        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <h1 id="modules">Modules</h1>
+      <p>
+        Modules in Python are files containing Python code that can be reused in
+        other programs. They help in organizing code and promoting code
+        reusability by allowing you to import functions, classes, and variables
+        from one Python file into another. This tutorial provides an overview of
+        Python modules, including their creation, usage, and benefits.
+      </p>
+      <h2 id="creating-a-module">Creating a Module</h2>
+      <p>
+        A Python module is simply a Python file with the
+        <code class="language-python">.py</code> extension. You can create a
+        module by writing functions, classes, or variables in a Python file and
+        saving it with a meaningful name.
+      </p>
+      <pre><code class="language-python">
+      # my_module.py
+
+      def greet(name):
+          return f"Hello, {name}!"
+      </code></pre>
+      <h2 id="importing-a-module">Importing a Module</h2>
+      <p>
+        To use functions or other items from a module in your Python program,
+        you need to import the module. There are various ways to import modules:
+      </p>
+      <h3 id="importing-the-entire-module">Importing the Entire Module</h3>
+      <pre><code class="language-python">
+      import my_module
+
+      result = my_module.greet("Alice")
+      print(result)  # Output: Hello, Alice!
+      </code></pre>
+      <h3 id="importing-specific-items-from-a-module">
+        Importing Specific Items from a Module
+      </h3>
+      <p>
+        You can also import specific items (functions, classes, or variables)
+        from a module.
+      </p>
+      <pre><code class="language-python">
+      from my_module import greet
+
+      result = greet("Bob")
+      print(result)  # Output: Hello, Bob!
+      </code></pre>
+      <h3 id="renaming-a-module">Renaming a Module</h3>
+      <p>You can use the as keyword to rename a module during import.</p>
+      <pre><code class="language-python">
+      import my_module as mm
+
+      result = mm.greet("Eve")
+      print(result)  # Output: Hello, Eve!
+      </code></pre>
+      <h2 id="standard-library-modules">Standard Library Modules</h2>
+      <p>
+        Python comes with a standard library that includes many pre-built
+        modules, providing a wide range of functionalities. These modules cover
+        tasks like math operations, file handling, date and time manipulation,
+        and much more.
+      </p>
+      <pre><code class="language-python">
+      import math
+
+      value = math.sqrt(16)
+      print(value)  # Output: 4.0
+      </code></pre>
+      <h2 id="third-party-modules">Third-Party Modules</h2>
+      <p>
+        Apart from the standard library, Python offers an extensive collection
+        of third-party modules that can be installed using package managers like
+        <code class="language-python">pip</code>. These modules extend Python's
+        capabilities and allow you to accomplish complex tasks efficiently.
+      </p>
+      <pre><code class="language-python">
+      # Installing a third-party module using pip
+      # pip install requests
+
+      import requests
+
+      response = requests.get("https://www.example.com")
+      print(response.status_code)  # Output: 200
+      </code></pre>
+    </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./functions.html">Previous</a>
+      <a href="./file-handling.html">Next</a>
+    </nav>
+
+    <!-- Import header script -->
+    <script src="/scripts/header.js"></script>
+    <!-- Import syntax highlighting scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  </body>
+</html>

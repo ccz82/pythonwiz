@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <title>pythonwiz | Exception Handling</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="navigationItems">
+        <!-- Logo (both mobile and desktop) -->
+        <a href="/index.html" id="logo">
+          <img
+            src="/assets/logo.png"
+            alt="pythonwiz Logo"
+            width="175"
+            height="35"
+          />
+        </a>
+        <!-- Buttons and navigation links -->
+        <div>
+          <!-- Desktop navigation links -->
+          <nav id="navigationLinks">
+            <a class="navigationLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button onclick="setMenuState()" id="menuButton">
+            <!-- Menu button SVG -->
+            <svg
+              id="menuButtonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+              />
+            </svg>
+            <!-- Menu close SVG -->
+            <svg
+              id="menuCloseSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="45"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu">
+        <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <h1 id="exception-handling">Exception Handling</h1>
+      <p>
+        Exception handling in Python allows you to gracefully handle errors that
+        may occur during the execution of a program. This tutorial
+        provides an overview of Python exception handling, including try-except
+        blocks, handling specific exceptions, and using the finally block.
+      </p>
+      <h2 id="handling-exceptions-with-try-except">
+        Handling Exceptions with Try-Except
+      </h2>
+      <p>
+        To handle exceptions in Python, you can use the try-except block. Code
+        that might raise an exception is placed inside the try block, and the
+        except block catches and handles the exception if it occurs.
+      </p>
+      <pre><code class="language-python">
+      try:
+          # Code that may raise an exception
+          result = 10 / 0
+      except:
+          # Code to handle the exception
+          print("An error occurred.")
+      </code></pre>
+      <h2 id="handling-specific-exceptions">Handling Specific Exceptions</h2>
+      <p>
+        You can specify the type of exception to catch and handle different
+        types of errors differently.
+      </p>
+      <pre><code class="language-python">
+      try:
+          # Code that may raise an exception
+          num1 = int(input("Enter a number: "))
+          num2 = int(input("Enter another number: "))
+          result = num1 / num2
+      except ZeroDivisionError:
+          # Handling division by zero error
+          print("Division by zero is not allowed.")
+      except ValueError:
+          # Handling invalid input error
+          print("Invalid input. Please enter valid numbers.")
+      </code></pre>
+      <h2 id="handling-multiple-exceptions">Handling Multiple Exceptions</h2>
+      <p>You can handle multiple exceptions in a single try-except block.</p>
+      <pre><code class="language-python">
+      try:
+          # Code that may raise an exception
+          age = int(input("Enter your age: "))
+          result = 100 / age
+      except ZeroDivisionError:
+          print("Division by zero is not allowed.")
+      except ValueError:
+          print("Invalid age. Please enter a valid number.")
+      except Exception as e:
+          # Catching any other unexpected exceptions
+          print("An unexpected error occurred:", e)
+      </code></pre>
+      <h2 id="using-the-finally-block">Using the Finally Block</h2>
+      <p>
+        The finally block is used to execute code regardless of whether an
+        exception occurs or not. It is executed after the try and except blocks,
+        whether an exception is raised or not.
+      </p>
+      <pre><code class="language-python">
+      try:
+          # Code that may raise an exception
+          file = open("data.txt", 'r')
+          content = file.read()
+          print(content)
+      except FileNotFoundError:
+          print("File not found.")
+      finally:
+          # Code to execute regardless of an exception
+          file.close()
+      </code></pre>
+      <h2 id="raising-exceptions">Raising Exceptions</h2>
+      <p>
+        You can raise custom exceptions using the
+        <code class="language-python">raise</code> keyword.
+      </p>
+      <pre><code class="language-python">
+      try:
+          age = int(input("Enter your age: "))
+          if age &lt; 0:
+              raise ValueError("Age cannot be negative.")
+      except ValueError as ve:
+          print("Error:", ve)
+      </code></pre>
+    </article>
+
+    <!-- Tutorial navigation -->
+    <nav id="tutorialNavigation">
+      <a href="./file-handling.html">Previous</a>
+      <a href="./object-oriented-programming.html">Next</a>
+    </nav>
+
+    <!-- Import header script -->
+    <script src="/scripts/header.js"></script>
+    <!-- Import syntax highlighting scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  </body>
+</html>

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
     <title>pythonwiz | Tutorials</title>
   </head>
 
@@ -27,9 +28,8 @@
         <div>
           <!-- Desktop navigation links -->
           <nav id="navigationLinks">
-            <a class="navigationLink" href="/tutorials/index.html"
-              >Tutorials</a
-            >
+            <a class="navigationLink activeLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/reference/index.html">Reference</a>
           </nav>
           <!-- Mobile menu button -->
           <button onclick="setMenuState()" id="menuButton">
@@ -63,10 +63,29 @@
       <!-- Mobile menu -->
       <nav id="mobileMenu">
         <a class="mobileMenuLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/reference/index.html">Reference</a>
       </nav>
     </header>
 
-    <a href="./introduction-to-python.html">Introduction-to-python</a>
+    <!-- Content -->
+    <article>
+      <h1>Tutorials</h1>
+      <p>Start learning Python from our curated list of tutorials that cover various topics related to Python programming!</p>
+      <ol>
+        <li><a href="./introduction-to-python.html">Introduction to Python</a></li>
+        <li><a href="./hello-world.html">Hello, world</a></li>
+        <li><a href="./variables-and-data-types.html">Variables and Data Types</a></li>
+        <li><a href="./operators-and-expressions.html">Operators and Expressions</a></li>
+        <li><a href="./control-flow.html">Control Flow</a></li>
+        <li><a href="./lists-and-tuples.html">Lists and Tuples</a></li>
+        <li><a href="./dictionaries-and-sets.html">Dictionaries and Sets</a></li>
+        <li><a href="./functions.html">Functions</a></li>
+        <li><a href="./modules.html">Modules</a></li>
+        <li><a href="./file-handling.html">File Handling</a></li>
+        <li><a href="./exception-handling.html">Exception Handling</a></li>
+        <li><a href="./object-oriented-programming.html">Object-Oriented Programming (OOP)</a></li>
+      </ol>
+    </article>
 
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>
