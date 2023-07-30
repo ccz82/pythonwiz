@@ -1,0 +1,47 @@
+/* Tutorial page styles */
+
+#tutorials {
+  font-family: "Shippori Mincho B1", serif;
+  color: var(--text-color);
+  padding: 15px;
+
+  /* Responsive design */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+}
+
+#tutorials h1 {
+  font-size: 3em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#tutorials p {
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#tutorials a {
+  color: var(--text-color);
+}
+
+#tutorials a:hover {
+  color: var(--orange);
+}
+
+#tutorials ul,
+#tutorials ol {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+
+#tutorials ul li,
+#tutorials ol li {
+  font-size: 1.5em;
+  padding: 3px;
+}
