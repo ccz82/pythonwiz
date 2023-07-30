@@ -7,15 +7,13 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/progressBar.css" />
     <link rel="stylesheet" href="/styles/article.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/tutorialNavigation.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
     />
-    <title>Hello, world | pythonwiz</title>
+    <title>Email submitted! | pythonwiz</title>
   </head>
 
   <body>
@@ -35,7 +33,9 @@
         <div>
           <!-- Desktop navigation links -->
           <nav id="navigationLinks">
-            <a class="navigationLink activeLink" href="/tutorials/index.html">Tutorials</a>
+            <a class="navigationLink" href="/tutorials/index.html"
+              >Tutorials</a
+            >
             <a class="navigationLink" href="/quiz/index.html">Quiz</a>
           </nav>
           <!-- Mobile menu button -->
@@ -69,56 +69,19 @@
       </div>
       <!-- Mobile menu -->
       <nav id="mobileMenu">
-        <a class="mobileMenuLink activeLink" href="/tutorials/index.html">Tutorials</a>
+        <a class="mobileMenuLink" href="/tutorials/index.html"
+          >Tutorials</a
+        >
         <a class="mobileMenuLink" href="/quiz/index.html">Quiz</a>
       </nav>
     </header>
 
-    <!-- Progress bar -->
-    <div id="progressBar">
-      <div id="progress"></div>
-    </div>
-
     <!-- Content -->
     <article>
-      <h1 id="hello-world">Hello, world</h1>
-      <p>
-        Let's start by learning every programmer's first introduction to a
-        programming language, how to print
-        <code class="language-python">Hello, world</code> to the output.
-      </p>
-      <pre><code class="language-python">
-      print("Hello, world")
-      </code></pre>
-      <p>
-        In the line of code above, we call the function
-        <code class="language-python">print()</code> and pass in the string
-        <code class="language-python">"Hello, world"</code>. The output is:
-      </p>
-      <pre><code class="language-plaintext">
-      Hello, world
-      </code></pre>
-      <h2 id="what-is-print">
-        What is <code class="language-python">print()</code>?
-      </h2>
-      <p>
-        <code class="language-python">print()</code> is a built-in Python
-        function that displays an output to the screen.
-      </p>
-      <h2 id="what-is-a-string">What is a string?</h2>
-      <p>
-        Don't worry about this for now! We will cover data types in Python later
-        on. For now, just remember that
-        <code class="language-python">"Hello, world"</code> is a string in
-        Python.
-      </p>
+      <h1>Email submitted!</h1>
+      <p id="email"></p>
+      <p>Thank you for signing up as an exclusive member of pythonwiz!</p>
     </article>
-
-    <!-- Tutorial navigation -->
-    <nav id="tutorialNavigation">
-      <a href="./introduction-to-python.html">Previous</a>
-      <a href="./variables-and-data-types.html">Next</a>
-    </nav>
 
     <!-- Footer -->
     <footer>
@@ -161,13 +124,9 @@
       </div>
     </footer>
 
-    <!-- Import progress bar script -->
-    <script src="/scripts/progressBar.js"></script>
     <!-- Import header script -->
     <script src="/scripts/header.js"></script>
-    <!-- Import syntax highlighting scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <!-- Import form script -->
+    <script src="/scripts/form.js"></script>
   </body>
 </html>
