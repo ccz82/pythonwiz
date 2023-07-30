@@ -63,7 +63,7 @@ article td {
 }
 
 article table {
-  width: 100%;
+  width: 100vw;
 }
 
 article th,

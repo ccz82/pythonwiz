@@ -4,6 +4,7 @@ A Python educational site that aims to teach beginners about the Python programm
 
 ## Features
 - Light/dark mode based on user's system
+- A progress bar to indicate scroll position
 
 ## Installation
 Clone the repository.
